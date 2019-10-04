@@ -53,6 +53,11 @@ Step3:
 
 open http://localhost:3000/v1/docs in web browser
 
+## Check API In Postma
+
+Import Phonebook_API.postman_collection.json file in postman to start
+
+
 
 ## Running in Production
 
@@ -123,3 +128,4 @@ Run deploy script:
 ```bash
 yarn deploy
 ```
+

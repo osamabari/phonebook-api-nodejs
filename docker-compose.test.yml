@@ -1,0 +1,6 @@
+version: "2"
+services:
+  rest-api:
+    command: yarn test
+    environment:
+      - NODE_ENV=test

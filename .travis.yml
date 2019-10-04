@@ -1,0 +1,30 @@
+language: node_js
+
+cache:
+  directories:
+    - ~/.npm
+    
+node_js:
+  - '10'
+  
+services:
+  - mongodb
+
+git:
+  depth: 3
+
+branches:
+  only:
+    - master
+
+env:
+  global:
+    - NODE_ENV=test
+    - PORT=3000
+    - JWT_SECRET=093nkasd0i12390123123
+    - JWT_EXPIRATION_MINUTES=15
+    - MONGO_URI=mongodb://localhost/rest_api
+    - MONGO_URI_TESTS=mongodb://localhost/rest_api_test
+
+script: yarn validate
+after_success: yarn coverage

@@ -26,10 +26,8 @@ async function format(contact) {
 
 describe('Contacts API', async () => {
   let userAccessToken;
-  let userSecondAccessToken;
   let dbUsers;
   let contact;
-  let admin;
 
   const password = '123456';
   const passwordHashed = await bcrypt.hash(password, 1);
@@ -50,23 +48,13 @@ describe('Contacts API', async () => {
     };
 
     contact = {
-      email: "o@o.com",
-      firstName: "New 41 Osama",
+      email: "osamabari@hotmail.com",
+      firstName: "Osama",
       lastName: "Bari",
-      phone: "123",
-      mobile: "321",
-      address: "new addr",
-      picture: "asd"
-    };
-
-    admin = {
-      email: "o@o.com",
-      firstName: "New 41 Osama",
-      lastName: "Bari",
-      phone: "123",
-      mobile: "321",
-      address: "new addr",
-      picture: "asd"
+      phone: "0401231231",
+      mobile: "0501231231",
+      address: "Business bay, Dubai, UAE",
+      picture: "https://avatars1.githubusercontent.com/u/13195588?s=460&v=4"
     };
 
     await User.remove({});
